@@ -9,24 +9,24 @@ defineProps({
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <h1 class="yellow">{{ msg }}</h1>
     <h3>
-      You’ve successfully created a project with
-      <a target="_blank" href="https://vitejs.dev/">Vite</a> +
-      <a target="_blank" href="https://vuejs.org/">Vue 3</a>.
+      Una vez las pruebas quedarás adicto al sabor!!
     </h3>
   </div>
 </template>
 
 <style scoped>
 h1 {
-  font-weight: 500;
   font-size: 2.6rem;
   top: -10px;
+  font-family: 'Fredoka One', cursive;
+  line-height: 100%;
 }
 
 h3 {
   font-size: 1.2rem;
+  font-family: 'Architects Daughter', cursive;
 }
 
 .greetings h1,

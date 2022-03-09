@@ -5,7 +5,8 @@
     </i>
     <div class="details">
       <h3>
-        <slot name="heading"></slot>
+        <b><slot name="heading"></slot></b>
+        <span class="price"><slot name ="price"></slot></span>
       </h3>
       <slot></slot>
     </div>

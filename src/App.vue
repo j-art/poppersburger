@@ -1,18 +1,18 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from '@/components/HelloWorld.vue'
+import helloMessage from '@/components/helloMessage.vue'
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <img alt="Popper's Burgers logo" class="logo" src="@/assets/logo_poppersburgers.png" width="200" height="200" />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <helloMessage msg="Addictive Burgers!" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/">Menú</RouterLink>
+        <RouterLink to="/about">Popperianos</RouterLink>
       </nav>
     </div>
   </header>
@@ -21,6 +21,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredoka+One&display=swap');
 @import '@/assets/base.css';
 
 #app {
@@ -59,6 +60,7 @@ nav {
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
+  font-family: 'Architects Daughter', cursive;
 }
 
 nav a.router-link-exact-active {
@@ -110,7 +112,7 @@ nav a:first-of-type {
   nav {
     text-align: left;
     margin-left: -1rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
 
     padding: 1rem 0;
     margin-top: 1rem;

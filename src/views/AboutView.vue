@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <p>Nacimos como una marca fresca y con una buena combinación de lo simple generando sabores que te harán adicto a una buena Burger </p>
   </div>
 </template>
 
@@ -10,6 +10,10 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
+  }
+  p{
+    font-size: 1.2rem;
+    font-family: 'Architects Daughter', cursive;
   }
 }
 </style>
