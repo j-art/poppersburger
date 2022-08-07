@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredoka+One&display=swap');
+
+html,body{
+  font-family: 'Architects Daughter', cursive;
+}
+#logo{
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#logo img{
+  margin: 0 15px;
+}
+#containerBurgers, #containerDrinks{
+  display: flex ;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.titleProducts{
+  color: red;
+  text-align: center;
+}
+.item {
+  flex: 1 1 0;
+  width: 0;
+  margin: 10px 10px 10px 10px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 5px 10px #ccc;
+  padding: 15px;
+  border-radius: 15px;
+}
+.burgerPhoto {
+  border-radius: 32px;
+}
+.details div.price {
+  padding: 5px;
+  background: #fffadc;
+  border: 3px solid #01a5de;
+  border-radius: 10px;
+  color: #da1018;
+  font-weight: 800;
+  text-align: center;
+  margin: 10px;
+}
+i {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  padding: 5px;
+  color: var(--color-text);
+  vertical-align: middle;
+}
+#containerBurgers .item img{
+  width: 100%;
+}
+#containerDrinks .item img{
+  width: auto;
+}
+#containerDrinks .item i img{
+  width: 100%;
+}
+#containerDrinks .item{
+  text-align: center;
+}
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.03); }
+h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: var(--color-heading);
+}
+b{
+  font-weight: bold;
+  display: inline-block;
+}
+
+/*TITLE*/
+.greetings h1 {
+  font-size: 2.6rem;
+  top: -10px;
+  font-family: 'Fredoka One', cursive;
+  line-height: 100%;
+}
+
+.greetings h3 {
+  font-size: 1.2rem;
+  font-family: 'Architects Daughter', cursive;
+}
+
+.greetings h1,
+.greetings h3 {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .greetings h1,
+  .greetings h3 {
+    text-align: left;
+  }
+}
+.yellow {
+  color: #ff0;
+  text-shadow: 2px 2px 3px #282828;
+}
+
+/*---------------------------*/
+/*EFECTO NEON*/
+
+  /* border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+
+  box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #bc13fe,
+              0 0 0.8rem #bc13fe,
+              0 0 2.8rem #bc13fe,
+              inset 0 0 1.3rem #bc13fe; */
+
+.neonText {
+  /* animation: flicker 1.5s infinite alternate;  */
+  animation: pulsate 2.5s infinite alternate;
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  }
+  20%, 24%, 55% {       
+    text-shadow: none;
+  }
+}
+@keyframes pulsate {
+  100% {
+    /* Larger blur radius */
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  }
+  0% {
+    /* Smaller blur radius */
+    text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #0fa,
+      0 0 45px #0fa,
+      0 0 55px #0fa,
+      0 0 70px #0fa,
+      0 0 80px #0fa;
+  }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .item{
+    width: auto;
+  }
+  #containerBurgers, #containerDrinks{
+    flex-direction: column;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .item{
+    min-width: 200px;
+  }
+}
