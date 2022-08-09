@@ -2,9 +2,26 @@ import logo from './assets/logo_poppersburgers.png';
 import './App.css';
 import Burger from './components/Burger';
 import Drink from './components/Drink';
+import { useState } from 'react';
 
 
 function App() {
+  const [selectBurger, setSelectBurger] = useState(true);
+  const [selectDrink, setSelectDrink] = useState(false);
+
+  const changeMenu = (e) => {
+    switch(e){
+      case 'burgers':
+          setSelectBurger(true);
+          setSelectDrink(false);
+        break;
+      case 'drinks':
+          setSelectBurger(false);
+          setSelectDrink(true);
+        break;
+    }
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,8 +35,11 @@ function App() {
           </div>
         </div>
       </header>
-      <h1 className='titleProducts'>Burgers</h1>
-      <div id='containerBurgers'>
+      <div id='containerButtons'>
+        <button className={`titleProducts ${selectBurger? "itemSelected" : ""}`} onClick={(e) => changeMenu('burgers')}>Burgers</button>
+        <button className={`titleProducts ${selectDrink? "itemSelected" : ""}`} onClick={(e) => changeMenu('drinks')}>Bebidas</button>
+      </div>
+      <div id='containerBurgers' style={{display : selectBurger? "flex" : "none"}}>
         <Burger 
           title = {'Cheese Burger'} 
           ingredients = {`pan brioche - lechuga - tomate y cebolla - queso cheddar fundido - carne de res - pepinillos - salsa leña.`} 
@@ -66,8 +86,7 @@ function App() {
           >
         </Burger>
       </div>
-      <h1 className='titleProducts '>Bebidas</h1>
-      <div id='containerDrinks'>
+      <div id='containerDrinks' style={{display : selectDrink? "flex" : "none"}}>
         <Drink 
           title = {'Coca-Cola'} 
           price = {'4k'} 

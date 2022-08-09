@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredoka+One&display=swap');
 
-html,body{
+html,body, button{
   font-family: 'Architects Daughter', cursive;
 }
 #logo{
@@ -17,9 +17,25 @@ html,body{
   justify-content: flex-start;
   flex-wrap: wrap;
 }
+#containerButtons{
+  display: flex;
+  justify-content: center;
+}
 .titleProducts{
   color: red;
   text-align: center;
+  padding: 10px 30px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid;
+  font-size: 1.1em;
+  box-shadow: 5px 5px 10px #ccc;
+  cursor: pointer;
+}
+.itemSelected,button.titleProducts:hover {
+  color: #02a5df;
+  box-shadow: 5px 5px 10px #393939;
 }
 .item {
   flex: 1 1 0;
@@ -184,6 +200,10 @@ b{
   }
   #containerBurgers, #containerDrinks{
     flex-direction: column;
+  }
+  #logo{
+    display: block;
+    text-align: center;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
